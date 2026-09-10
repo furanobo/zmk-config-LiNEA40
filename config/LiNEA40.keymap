@@ -116,6 +116,14 @@
 
             tap-ms = <20>;
         };
+
+        mb3_or_scroll: mb3_hold_scroll {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&mkp>;
+        };
     };
 
     keymap {
@@ -137,7 +145,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans                      &trans    &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans    &mkp MB1  &mb3_or_scroll SCROLL MB3  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp MB5            &trans    &trans    &trans
             >;
