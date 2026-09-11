@@ -55,8 +55,7 @@
 &trackball_listener {
     scroller {
         layers = <SCROLL>;
-        input-processors =
-            <&zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
 
@@ -142,10 +141,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans                     &trans    &trans
 &trans  &trans  &trans  &trans  &trans                      &trans    &mkp MB1  &mb3_or_scroll SCROLL MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp MB5            &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans                     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp MB5            &trans                     &trans    &trans
             >;
         };
 
@@ -153,10 +152,10 @@
 
         MARK {
             bindings = <
-&kp ESCAPE  &kp LG(LEFT)  &kp UP    &kp LG(RIGHT)  &trans                          &kp N7        &kp N8  &kp N9  &kp MINUS          &kp EQUAL
-&kp TAB     &kp LEFT      &kp DOWN  &kp RIGHT      &trans                          &kp N4        &kp N5  &kp N6  &trans             &kp RET
-&trans      &trans        &trans    &trans         &trans                          &kp N1        &kp N2  &kp N3  &kp LS(BACKSLASH)  &trans
-&kp TILDE   &trans        &trans    &trans         &trans  &trans    &kp LS(PLUS)  &kp LS(STAR)          &kp N0  &kp STAR           &kp FSLH
+&kp ESCAPE  &kp LS(LG(LEFT))  &kp UP    &kp LG(LS(RIGHT))  &trans                          &kp N7        &kp N8  &kp N9  &kp MINUS          &kp K_BACK
+&kp TAB     &kp LEFT          &kp DOWN  &kp RIGHT          &trans                          &kp N4        &kp N5  &kp N6  &kp EQUAL          &kp RET
+&trans      &trans            &trans    &trans             &trans                          &kp N1        &kp N2  &kp N3  &kp LS(BACKSLASH)  &trans
+&kp TILDE   &trans            &trans    &trans             &trans  &trans    &kp LS(PLUS)  &kp LS(STAR)          &kp N0  &kp STAR           &kp FSLH
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
